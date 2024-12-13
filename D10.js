@@ -186,7 +186,7 @@ console.log(rollTheDices(3)); */
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
-function howManyDays(date) {
+/* function howManyDays(date) {
   const imputDate = new Date(date);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -194,13 +194,27 @@ function howManyDays(date) {
   let differenzaGiorni = Math.floor(defferenzaMillesecondi / (1000 * 60 * 60 * 24));
   return differenzaGiorni;
 }
-console.log(howManyDays("11.11.2001"));
+console.log(howManyDays("12.12.2024")); */
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 
+/* function isTodayMyBirthday(bDay) {
+  const today = new Date();
+  //return false
+  const inputDate = new Date(bDay)
+  today.setHours(0, 0, 0, 0);
+  inputDate.setHours(0, 0, 0, 0);
+  console.log(today);
+  console.log(inputDate);
+  if (today.getTime()!=inputDate.getTime()) {
+    return false;
+  } return true;
 
+}
+console.log(isTodayMyBirthday("12.13.2024"));
+console.log(isTodayMyBirthday("12.13.2021")); */
 
 // Arrays & Oggetti
 
@@ -416,6 +430,18 @@ function searchAndDivide(key) {
 
 */
 
+/* function halfTree(n) {
+  for(let i=1; i<=n; i++){
+    let a = "";
+    for (let j=1; j<=i; j++){
+      a+="*"
+    }
+    console.log(a);
+    
+  } 
+}
+halfTree(5); */
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -428,9 +454,39 @@ function searchAndDivide(key) {
 
 */
 
+//       );
+
+/* function halfTree(n) {
+  for(let i=1; i<=n; i++){
+    let a = "";
+    for(let s=1; s<=(n-i); s++){
+      a+=" "
+    }
+    for (let j=1; j<=1+2*(i-1); j++){
+      a+="*"
+    }
+    for(let s=1; s<=(n-i); s++){
+      a+=" "
+    }
+    console.log(a);
+  } 
+}
+halfTree(5); */
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function isItPrime(number) {
+  if (number <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isItPrime(1800));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
