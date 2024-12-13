@@ -477,7 +477,8 @@ halfTree(5); */
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-function isItPrime(number) {
+
+/* function isItPrime(number) {
   if (number <= 1) return false;
   for (let i = 2; i <= Math.sqrt(number); i++) {
     if (number % i === 0) {
@@ -486,7 +487,7 @@ function isItPrime(number) {
   }
   return true;
 }
-console.log(isItPrime(1800));
+console.log(isItPrime(1879)); */
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
