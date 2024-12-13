@@ -69,8 +69,8 @@ me.skills = ["HTML", "CSS", "JavaScript"]; */
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-let dice =()=>Math.round(Math.random()*5)+1;
-console.log(dice);
+/* let dice =()=>Math.round(Math.random()*5)+1;
+console.log(dice); */
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -186,13 +186,15 @@ console.log(rollTheDices(3)); */
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
-
-
-/* const now = new Date();
-function whatDayIsIt() {
-  let today = now.getDay();
+function howManyDays(date) {
+  const imputDate = new Date(date);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  let defferenzaMillesecondi = today - imputDate;
+  let differenzaGiorni = Math.floor(defferenzaMillesecondi / (1000 * 60 * 60 * 24));
+  return differenzaGiorni;
 }
-console.log(whatDayIsIt()); */
+console.log(howManyDays("11.11.2001"));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
